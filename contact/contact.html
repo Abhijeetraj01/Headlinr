@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="contact-container">
+      <h2>Get in Touch</h2>
+      <p class="subtitle">We’d love to hear from you!</p>
+      <form id="contact-form" class="contact-form">
+        <div class="row">
+          <input type="text" name="first_name" placeholder="First Name" required />
+          <input type="text" name="last_name" placeholder="Last Name" required />
+        </div>
+        <div class="row">
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="tel" name="phone" placeholder="Phone Number" />
+        </div>
+        <textarea name="message" placeholder="What do you have in mind?" rows="4" required></textarea>
+        <button type="submit">Submit</button>
+    
+    </div>
+  
+      </form>
+    
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+          e.preventDefault();
+      
+          const firstName = e.target.first_name.value.trim();
+          const lastName = e.target.last_name.value.trim();
+          const email = e.target.email.value.trim();
+          const phone = e.target.phone.value.trim(); 
+          const message = e.target.message.value.trim();
+      
+          const formData = {
+            name: firstName + ' ' + lastName,  
+            email,
+            message
+          };
+      
+          try {
+            const response = await fetch('/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(formData)
+            });
+      
+            if (response.ok) {
+              alert('✅ Message sent successfully!');
+              e.target.reset();
+            } else {
+              alert('❌ Error');
+            }
+          } catch (error) {
+            alert('❌ Error connecting to server.');
+          }
+        });
+      </script>
+      
+      
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headlinr - Latest Headlines</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-newspaper"></i>
+                <h1>Headlinr</h1>
+            </div>
+            <!--search bar-->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search news..." />
+                <span class="search-icon">
+                  🔍
+                </span>
+            </div>
+
+<div>
+    <button class="header-links">
+        <span>
+            <a href="bookmark/bookmarks.html" id="bookmark-link"> Bookmarks</a>
+        </span>
+    </button>
+    <button class="header-links">
+        <span>
+            <a href="about/about.html">About Us</a>
+        <span>
+    </button >
+        <button class="header-links">
+         <span>
+            <a href="contact/contact.html">Contact Us </a>
+         </span>
+        </button>
+</div>
+
+
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h2 id="page-title">Top Headlines</h2>
+                <p>Stay updated with the latest news from around the world</p>
+            </div>
+
+            <div class="categories">
+                <button class="category-btn active" data-category="">General</button>
+                <button class="category-btn" data-category="business">Business</button>
+                <button class="category-btn" data-category="technology">Technology</button>
+                <button class="category-btn" data-category="entertainment">Entertainment</button>
+                <button class="category-btn" data-category="sports">Sports</button>
+                <button class="category-btn" data-category="science">Science</button>
+                <button class="category-btn" data-category="health">Health</button>
+            </div>
+
+         
+            <div id="news-container" class="news-grid">
+                <!-- News cards will be inserted here by JavaScript -->
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading news...</p>
+                </div>
+            </div>
+            
+            <!--load More Button-->
+            <div class="load-more-container">
+                <button id="load-more-btn" type="button">Load More</button>
+              </div>
+              
+              
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>Headlinr</h3>
+                    </div>
+                    <p>Your trusted source for the latest news and updates from around the world.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#" data-category="business">Business</a></li>
+                        <li><a href="#" data-category="technology">Technology</a></li>
+                        <li><a href="#" data-category="sports">Sports</a></li>
+                        <li><a href="#" data-category="entertainment">Entertainment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about/about.html">About Us</a></li>
+                        <li><a href="contact/contact.html">Contact Us </a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy/privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms/terms.html">Terms of Service</a></li>
+                        <li><a href="cookies/cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="current-year"></span> Headlinr. All rights reserved.
+            </div>
+        </div>
+    </footer>
+<!--dark mode toggle-->           
+    <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+        <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+        <mask class="moon" id="moon-mask">
+            <rect x="0" y="0" width="100%" height="100%" fill="white" />
+            <circle cx="24" cy="10" r="6" fill="black" />
+        </mask>
+        <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+        <g class="sun-beams" stroke="currentColor">
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </g>
+        </svg>
+    </button>
+    
+<script src="script.js"></script>
+</body>
+
+</html>

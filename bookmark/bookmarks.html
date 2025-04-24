@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmarks</title>
+  <link rel="stylesheet" href="bookmarks.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="logo">
+            <i class="fas fa-newspaper"></i>
+            <h1>Headlinr</h1>
+        </div>
+        <!--search bar-->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search news..." />
+            <span class="search-icon">
+              🔍
+            </span>
+        </div>
+        <button class="header-links">
+          <span>
+              <a href="../index.html" id="bookmark-link"> Home</a>
+          </span>
+      </button>
+    </div>
+
+
+</header>
+<main>
+<div class="container">
+  <div class="page-header">
+      <h2 id="page-title">Bookmarks</h2>
+      <p>Stuff You Didn’t Want to Miss</p>
+  </div>
+  <div class="bookmarks-container bookmarks-tab"></div>
+</main>
+  <script src="bookmarks.js"></script>
+</body>
+</html>
