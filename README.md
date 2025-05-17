@@ -44,7 +44,6 @@ Headlinr/
 
 ## 📌 Future Enhancements
 
-- User authentication system for personalized bookmarks.
 - Push notifications for breaking news alerts.
 
 
